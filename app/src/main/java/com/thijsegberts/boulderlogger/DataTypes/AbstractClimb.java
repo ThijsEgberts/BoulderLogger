@@ -9,6 +9,7 @@ public abstract class AbstractClimb {
     private double xLoc;
     private double yLoc;
     protected ClimbTypes type;
+    protected BoulderGrades grade;
 
     public AbstractClimb(int id) {
         this.id = id;
