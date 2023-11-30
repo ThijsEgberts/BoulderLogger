@@ -3,7 +3,7 @@ package com.thijsegberts.boulderlogger.DataTypes;
 import android.graphics.Color;
 
 public abstract class AbstractClimb {
-    private int id;
+    private String id = null;
     private int climbNr;
     private Color color;
     private double xLoc;
@@ -11,13 +11,29 @@ public abstract class AbstractClimb {
     protected ClimbTypes type;
     protected BoulderGrades grade;
 
-    public AbstractClimb(int id) {
-        this.id = id;
+    public AbstractClimb() {
     }
 
-    public AbstractClimb(int id, int climbNr) {
-        this.id = id;
+    public AbstractClimb(int climbNr) {
         this.climbNr = climbNr;
+    }
+
+    /**
+     * Sets the number of the climb.
+     *
+     * @param climbNr integer number of the climb
+     */
+    public void setClimbNr(int climbNr) {
+        this.climbNr = climbNr;
+    }
+
+    /**
+     * Returns the number of the climb.
+     *
+     * @return integer number of the climb
+     */
+    public int getClimbNr() {
+        return this.climbNr;
     }
 
     /**
@@ -30,6 +46,15 @@ public abstract class AbstractClimb {
     }
 
     /**
+     * Returns the color of the climb as a color object.
+     *
+     * @return a color object of the climbs color
+     */
+    public Color getColor() {
+        return this.color;
+    }
+
+    /**
      * Set the location of the boulder in the physical space.
      *
      * @param x coordinate
@@ -38,5 +63,41 @@ public abstract class AbstractClimb {
     public void setLoc(double x, double y) {
         this.xLoc = x;
         this.yLoc = y;
+    }
+
+    /**
+     * Returns the id of the climb.
+     *
+     * @return id string
+     */
+    public String getId() {
+        return id;
+    }
+
+    /**
+     * Sets the id of a climb if it is not null.
+     *
+     * @param id value the id is to be set to
+     */
+    public void setId(String id) {
+        if (this.id != null) this.id = id;
+    }
+
+    /**
+     * Returns the x component of the boulder location.
+     *
+     * @return a x coordinate double
+     */
+    public double getXLoc() {
+        return this.xLoc;
+    }
+
+    /**
+     * Returns the y component of the boulder location.
+     *
+     * @return a y coordinate double
+     */
+    public double getYLoc() {
+        return this.yLoc;
     }
 }

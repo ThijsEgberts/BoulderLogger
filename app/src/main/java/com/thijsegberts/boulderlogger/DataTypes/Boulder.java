@@ -2,13 +2,13 @@ package com.thijsegberts.boulderlogger.DataTypes;
 
 public class Boulder extends AbstractClimb {
 
-    public Boulder(int id) {
-        super(id);
+    public Boulder() {
+        super();
         this.type = ClimbTypes.BOULDER;
     }
 
-    public Boulder(int id, int climbNr) {
-        super(id, climbNr);
+    public Boulder(int climbNr) {
+        super(climbNr);
         this.type = ClimbTypes.BOULDER;
     }
 }
