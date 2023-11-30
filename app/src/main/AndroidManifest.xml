@@ -12,6 +12,12 @@
         android:theme="@style/Theme.BoulderLogger"
         tools:targetApi="31">
         <activity
+            android:name=".LogginListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoggingWindowActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
