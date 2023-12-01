@@ -4,11 +4,11 @@ public class Boulder extends AbstractClimb {
 
     public Boulder() {
         super();
-        this.type = ClimbTypes.BOULDER;
+        this.isBoulder = true;
     }
 
     public Boulder(int climbNr) {
         super(climbNr);
-        this.type = ClimbTypes.BOULDER;
+        this.isBoulder = true;
     }
 }

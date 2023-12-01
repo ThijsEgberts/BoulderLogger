@@ -3,13 +3,14 @@ package com.thijsegberts.boulderlogger.DataTypes;
 import android.graphics.Color;
 
 public abstract class AbstractClimb {
-    private String id = null;
-    private int climbNr;
-    private Color color;
-    private double xLoc;
+    private String id = null; //the firebase id of the climb
+    private int climbNr; //the display id/number of the climb
+    private Color color; //the color of the holds
+    private double xLoc; //the location of the climb
     private double yLoc;
-    protected ClimbTypes type;
-    protected BoulderGrades grade;
+    protected boolean isBoulder; //the type of the climb
+    protected BoulderGrades grade; //the grade of the climb given by the setters
+    protected BoulderGrades consensusGrade; //the consensus grade of the climb
 
     public AbstractClimb() {
     }
@@ -99,5 +100,9 @@ public abstract class AbstractClimb {
      */
     public double getYLoc() {
         return this.yLoc;
+    }
+
+    public boolean isBoulder() {
+        return isBoulder;
     }
 }
