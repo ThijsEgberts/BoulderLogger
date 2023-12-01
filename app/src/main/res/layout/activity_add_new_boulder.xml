@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
     tools:context=".Admin.AddNewBoulderActivity">
 
     <TextView
@@ -43,10 +44,10 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:text="Boulder number"
-        app:layout_constraintTop_toBottomOf="@id/editTextBoulderName"
+        app:layout_constraintBottom_toTopOf="@id/editTextBoulderNr"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/editTextBoulderNr" />
+        app:layout_constraintTop_toBottomOf="@id/editTextBoulderName" />
 
     <EditText
         android:id="@+id/editTextBoulderNr"
@@ -69,10 +70,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
-        app:layout_constraintBottom_toTopOf="@id/button"
+        app:layout_constraintBottom_toTopOf="@id/submitButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextBoulderNr">
+
 
         <TableRow
             android:layout_width="match_parent"
@@ -87,7 +89,6 @@
 
             <SeekBar
                 android:id="@+id/seekBarRed"
-                style="@style/Widget.AppCompat.SeekBar.Discrete"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -109,7 +110,6 @@
 
             <SeekBar
                 android:id="@+id/seekBarGreen"
-                style="@style/Widget.AppCompat.SeekBar.Discrete"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -131,7 +131,6 @@
 
             <SeekBar
                 android:id="@+id/seekBarBlue"
-                style="@style/Widget.AppCompat.SeekBar.Discrete"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -140,10 +139,22 @@
 
         </TableRow>
 
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/colorBarViewer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#6C1E1E" />
+        </TableRow>
+
     </TableLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/submitButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"

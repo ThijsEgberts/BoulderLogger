@@ -4,8 +4,9 @@ import android.graphics.Color;
 
 public abstract class AbstractClimb {
     private String id = null; //the firebase id of the climb
+    private String name; //the name of the boulder
     private int climbNr; //the display id/number of the climb
-    private Color color; //the color of the holds
+    private int color; //the color of the holds
     private double xLoc; //the location of the climb
     private double yLoc;
     protected boolean isBoulder; //the type of the climb
@@ -17,6 +18,12 @@ public abstract class AbstractClimb {
 
     public AbstractClimb(int climbNr) {
         this.climbNr = climbNr;
+    }
+
+    public AbstractClimb(int climbNr, String name, int color) {
+        this.climbNr = climbNr;
+        this.name = name;
+        this.color = color;
     }
 
     /**
@@ -42,7 +49,7 @@ public abstract class AbstractClimb {
      *
      * @param color
      */
-    public void setColor(Color color) {
+    public void setColor(int color) {
         this.color = color;
     }
 
@@ -51,7 +58,7 @@ public abstract class AbstractClimb {
      *
      * @return a color object of the climbs color
      */
-    public Color getColor() {
+    public int getColor() {
         return this.color;
     }
 
@@ -81,7 +88,7 @@ public abstract class AbstractClimb {
      * @param id value the id is to be set to
      */
     public void setId(String id) {
-        if (this.id != null) this.id = id;
+        if (this.id == null) this.id = id;
     }
 
     /**
@@ -104,5 +111,13 @@ public abstract class AbstractClimb {
 
     public boolean isBoulder() {
         return isBoulder;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

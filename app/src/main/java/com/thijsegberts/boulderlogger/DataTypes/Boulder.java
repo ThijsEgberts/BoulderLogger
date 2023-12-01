@@ -11,4 +11,9 @@ public class Boulder extends AbstractClimb {
         super(climbNr);
         this.isBoulder = true;
     }
+
+    public Boulder(int climbNr, String name, int color) {
+        super(climbNr, name, color);
+        this.isBoulder = true;
+    }
 }

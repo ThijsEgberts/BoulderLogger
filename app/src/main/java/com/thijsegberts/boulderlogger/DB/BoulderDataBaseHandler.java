@@ -42,6 +42,8 @@ public class BoulderDataBaseHandler extends DataBaseHandler {
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
                     Log.d(TAG, "onComplete: Successfully added boulder " + boulder.getId() + " to db");
+                } else {
+                    Log.e(TAG, "onComplete: Error while trying to added boulder " + boulder.getId() + " to db", task.getException());
                 }
             }
         });
