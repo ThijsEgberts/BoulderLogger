@@ -12,13 +12,10 @@
         android:theme="@style/Theme.BoulderLogger"
         tools:targetApi="31">
         <activity
-            android:name=".LogginListActivity"
+            android:name=".Admin.AdminPanelActivity"
             android:exported="false" />
         <activity
-            android:name=".LoggingWindowActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".Admin.AddNewBoulderActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +23,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Logger.LoggingListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Logger.LoggingWindowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>
